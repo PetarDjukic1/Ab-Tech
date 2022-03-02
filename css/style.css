@@ -239,11 +239,13 @@ button:hover {
   align-items: center;
   flex-direction: column;
   background-color: var(--body-color1);
+  padding-top: 80px;
 }
 
 .services-text {
   text-align: center;
   color: var(--font);
+  padding-bottom: 50px;
 }
 
 .services-text h4 {
