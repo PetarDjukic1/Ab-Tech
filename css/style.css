@@ -2,6 +2,8 @@
 
 :root {
   --font: #5a5454;
+  --body-color: #f5f5f5;
+  --body-color1: #f2f2f2;
 }
 
 * {
@@ -10,12 +12,12 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #f5f5f5;
+  background-color: var(--body-color);
   font-family: "Roboto", sans-serif;
 }
 
 span {
-  color: #8461bd;
+  color: #8529b9;
   font-weight: bold;
 }
 /*HEADER START*/
@@ -106,8 +108,8 @@ nav {
     display: none;
   }
   body {
-    overflow: hidden;
-    font-size: 10px;
+    overflow-x: hidden;
+    font-size: 13px;
   }
   .nav-links {
     z-index: 1000;
@@ -191,7 +193,7 @@ h2 {
   margin-top: 20px;
 }
 
-button {
+.promo-button {
   margin-top: 20px;
   color: white;
   padding: 9px 25px;
@@ -229,3 +231,96 @@ button:hover {
     text-align: center;
   }
 }
+/*PROMO SECTION END*/
+/*SERVICES SECTION START*/
+
+.services-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--body-color1);
+}
+
+.services-text {
+  text-align: center;
+  color: var(--font);
+}
+
+.services-text h4 {
+  text-transform: uppercase;
+}
+.services-text h2 {
+  font-weight: 400;
+}
+.services-text p {
+  color: #5a5454b6;
+}
+
+/*grid*/
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+}
+.grid-item {
+  background-color: var(--body-color1);
+  text-align: center;
+  padding: 0 20px 30px 20px;
+  transition: 0.4s;
+  box-shadow: 20px 20px 30px rgb(238, 238, 238);
+}
+.grid-item h4 {
+  font-weight: normal;
+  color: var(--font);
+  padding-bottom: 10px;
+}
+.grid-item p {
+  color: #5a5454b6;
+}
+.grid-item img {
+  padding: 80px 0 60px 0;
+}
+.grid-item button {
+  margin-top: 20px;
+  color: var(--font);
+  padding: 7px 20px;
+  background: var(--body-color1);
+  border: var(--font);
+  border-style: solid;
+  border-width: thin;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.grid-item:hover {
+  background: #8529b9;
+  box-shadow: 20px 20px 30px #8429b962;
+  color: var(--body-color1);
+}
+.grid-item:hover h4 {
+  color: var(--body-color1);
+}
+.grid-item:hover p {
+  color: var(--body-color1);
+}
+.grid-item:hover button {
+  border-style: none;
+}
+.grid-item:hover img {
+  filter: brightness(0) invert(1);
+}
+
+@media screen and (max-width: 700px) {
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1135px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/*SERVICES SECTON END*/
