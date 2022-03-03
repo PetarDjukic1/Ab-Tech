@@ -362,22 +362,28 @@ button:hover {
   font-size: 0.7em;
   padding-bottom: 20px;
 }
+.footer-col h2 {
+  color: var(--font);
+}
 .footer-col h2,
 h4 {
   padding-bottom: 15px;
+}
+.footer-col h4 {
+  color: var(--font);
+  font-weight: normal;
 }
 .footer-col ul li {
   padding-bottom: 10px;
 }
 
+.footer-col img {
+  padding: 0 5px;
+}
 .footer-col ul li a {
   text-decoration: none;
   color: #4940eb;
   font-size: 0.8em;
-}
-.footer-col h4 {
-  color: var(--font);
-  font-weight: normal;
 }
 
 @media screen and (max-width: 1135px) {
