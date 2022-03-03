@@ -4,6 +4,7 @@
   --font: #5a5454;
   --body-color: #f5f5f5;
   --body-color1: #f2f2f2;
+  --p-color: #5a5454b6;
 }
 
 * {
@@ -15,7 +16,12 @@ body {
   background-color: var(--body-color);
   font-family: "Roboto", sans-serif;
 }
-
+p {
+  color: var(--p-color);
+}
+ul {
+  list-style: none;
+}
 span {
   color: #8529b9;
   font-weight: bold;
@@ -48,7 +54,6 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 35%;
-  list-style: none;
 }
 
 .filler {
@@ -59,7 +64,7 @@ nav {
   text-decoration: none;
   letter-spacing: px;
   font-weight: bold;
-  font-size: 0.7em;
+  font-size: 0.8em;
   text-transform: uppercase;
 }
 
@@ -163,7 +168,7 @@ nav {
 
 .promo-section {
   display: flex;
-  width: 90%;
+  max-width: 80%;
   margin: auto;
   min-height: 50vh;
   align-items: center;
@@ -179,12 +184,15 @@ nav {
 }
 .promo-text h3 {
   font-weight: normal;
+  padding-bottom: 10px;
 }
 .promo-text h2 {
   letter-spacing: 0.1em;
+  margin: 0;
   text-transform: uppercase;
 }
 .promo-text p {
+  color: var(--font);
   font-size: 0.7em;
 }
 
@@ -201,6 +209,7 @@ h2 {
   border: none;
   border-radius: 50px;
   cursor: pointer;
+  box-shadow: 0px 5px 10px rgb(209, 209, 209);
   transition: all 0.3s ease 0s;
 }
 button:hover {
@@ -240,22 +249,23 @@ button:hover {
   flex-direction: column;
   background-color: var(--body-color1);
   padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .services-text {
   text-align: center;
   color: var(--font);
   padding-bottom: 50px;
+  line-height: 1.6em;
 }
 
 .services-text h4 {
   text-transform: uppercase;
+  padding-bottom: 10px;
 }
 .services-text h2 {
+  margin-top: 0;
   font-weight: 400;
-}
-.services-text p {
-  color: #5a5454b6;
 }
 
 /*grid*/
@@ -277,9 +287,7 @@ button:hover {
   color: var(--font);
   padding-bottom: 10px;
 }
-.grid-item p {
-  color: #5a5454b6;
-}
+
 .grid-item img {
   padding: 80px 0 60px 0;
 }
@@ -294,6 +302,9 @@ button:hover {
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s;
+}
+.grid-item p {
+  line-height: 1.6em;
 }
 .grid-item:hover {
   background: #8529b9;
@@ -313,10 +324,13 @@ button:hover {
   filter: brightness(0) invert(1);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 611px) {
   .services-grid {
     display: flex;
     flex-direction: column;
+  }
+  .grid-item img {
+    padding: 40px 0 30px 0;
   }
 }
 
@@ -326,3 +340,59 @@ button:hover {
   }
 }
 /*SERVICES SECTON END*/
+/*FOOTER START*/
+
+.footer {
+  padding: 70px 0;
+}
+.footer-col {
+  width: 20%;
+  padding: 0 15px 25px 15px;
+}
+.footer-container {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.footer-col p {
+  line-height: 1.6em;
+  font-size: 0.7em;
+  padding-bottom: 20px;
+}
+.footer-col h2,
+h4 {
+  padding-bottom: 15px;
+}
+.footer-col ul li {
+  padding-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #4940eb;
+  font-size: 0.8em;
+}
+.footer-col h4 {
+  color: var(--font);
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1135px) {
+  .footer-col {
+    width: 50%;
+  }
+  .footer-col p {
+    font-size: 1em;
+  }
+  .footer-col ul li a {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 611px) {
+  .footer-col {
+    width: 100%;
+  }
+}
