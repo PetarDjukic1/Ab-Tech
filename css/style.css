@@ -2,8 +2,8 @@
 
 :root {
   --font: #5a5454;
-  --body-color: #f5f5f5;
-  --body-color1: #f2f2f2;
+  --body-color1: #f5f5f5;
+  --body-color: #eeeeee;
   --p-color: #5a5454b6;
 }
 
@@ -344,6 +344,7 @@ button:hover {
 
 .footer {
   padding: 70px 0;
+  background-color: var(--body-color1);
 }
 .footer-col {
   width: 20%;
