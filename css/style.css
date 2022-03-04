@@ -340,10 +340,137 @@ button:hover {
   }
 }
 /*SERVICES SECTON END*/
+/*EXP SECTION START*/
+.exp-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--body-color);
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.exp-header {
+  text-align: center;
+  color: var(--font);
+  margin-bottom: 100px;
+  line-height: 1.6em;
+}
+
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  padding: 0 20px 0 20px;
+}
+.exp-item {
+  display: flex;
+  background-color: var(--body-color1);
+  align-items: center;
+  padding: 0 20px 30px 20px;
+  box-shadow: 20px 20px 30px rgb(226, 226, 226);
+}
+
+.exp-item img {
+  padding: 80px 20px 60px 0px;
+  max-width: 96px;
+  height: auto;
+}
+
+.exp-item h4 {
+  color: var(--font);
+}
+@media screen and (max-width: 611px) {
+  .exp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 700px) {
+  .exp-item {
+    padding: 10px 20px 10px 20px;
+  }
+}
+/*EXP SECTION END*/
+/*TOP PICKS SECTION START*/
+.picks-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.picks-text ul li a {
+  text-decoration: none;
+  color: var(--font);
+}
+
+.picks-text ul li a:hover {
+  color: #8529b9;
+}
+.picks-text ul li {
+  padding-top: 50px;
+}
+.picks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+  margin: 0 0 0 70px;
+}
+
+.picks-item h4 {
+  color: var(--font);
+  text-align: center;
+}
+.picks-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--body-color1);
+  padding: 40px 20px;
+  box-shadow: 20px 20px 30px rgb(226, 226, 226);
+}
+.picks-item img {
+  max-width: 128px;
+  height: auto;
+  padding-bottom: 30px;
+}
+.picks-item button {
+  margin-top: 5px;
+  color: var(--font);
+  padding: 7px 20px;
+  background: var(--body-color1);
+  border: var(--font);
+  border-style: solid;
+  border-width: thin;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.picks-item button:hover {
+  border-style: none;
+  background-color: #8461bd;
+  color: var(--body-color1);
+}
+
+@media screen and (max-width: 700px) {
+  .picks-text {
+    display: none;
+  }
+  .picks-grid {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 611px) {
+  .picks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/*TOP PICKS SECTION END*/
 /*FOOTER START*/
 
 .footer {
-  padding: 70px 0;
+  padding: 40px 0;
   background-color: var(--body-color1);
 }
 .footer-col {
@@ -403,3 +530,4 @@ h4 {
     width: 100%;
   }
 }
+/*FOOTER END*/
